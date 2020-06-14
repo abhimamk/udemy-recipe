@@ -14,7 +14,7 @@ export class DataStorageService {
     const recipes = this.recipeService.getRecipes();
     this.http
       .put(
-        'https://recipe-bb62a.firebaseio.com/recipe.json',
+        'https://recipe-a0e7a.firebaseio.com/recipes.json',
         recipes
       )
       .subscribe(response => {
@@ -27,7 +27,8 @@ export class DataStorageService {
 
     return this.http
       .get<Recipe[]>(
-        'https://recipe-bb62a.firebaseio.com/recipe.json'
+
+        'https://recipe-a0e7a.firebaseio.com/recipes.json'
       ).pipe(
         map(recipes => {
           return recipes.map(recipe => {
